@@ -20,6 +20,7 @@ class CourseAdapter(private val courses: List<Course>) :
         return CourseViewHolder(view)
     }
 
+
     override fun onBindViewHolder(holder: CourseViewHolder, position: Int) {
         val course = courses[position]
         holder.name.text = course.name

@@ -19,6 +19,7 @@ class CourseViewModel(private val repository: CourseRepository) : ViewModel() {
         }
     }
 
+
     fun addCourse(course: Course) {
         viewModelScope.launch {
             try {
