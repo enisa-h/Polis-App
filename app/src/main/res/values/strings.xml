@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Polis-App</string>
+    <string name="add_course">Add Course</string>
+    <string name="course_name">Course Name</string>
+    <string name="course_description">Course Description</string>
+    <string name="save_course">Save Course</string>
+</resources>
