@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private val courses = mutableListOf<Course>()
     private lateinit var adapter: CourseAdapter
 
-    // ✅ API moderne për rezultate nga aktivitete
+    //  API per ActivityResult
     private val addCourseLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result: ActivityResult ->
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 
-        // ✅ Përdorimi i launcher-it të ri, pa startActivityForResult
+        // perdorimi i launcher-it te ri, pa startActivityForResult
         findViewById<Button>(R.id.addButton).setOnClickListener {
             val intent = Intent(this, AddCourseActivity::class.java)
             addCourseLauncher.launch(intent)

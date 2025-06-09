@@ -6,9 +6,12 @@ import kotlinx.coroutines.launch
 import androidx.lifecycle.MutableLiveData
 
 class CourseViewModel(private val repository: CourseRepository) : ViewModel() {
+
     private val courses = MutableLiveData<List<Course>>()
+
     private val error = MutableLiveData<String>()
 
+    // fetch courses asynchronously and update LiveData
     private fun fetchCourses() {
         viewModelScope.launch {
             try {
@@ -19,7 +22,7 @@ class CourseViewModel(private val repository: CourseRepository) : ViewModel() {
         }
     }
 
-
+    // add a course, then refresh the course list
     fun addCourse(course: Course) {
         viewModelScope.launch {
             try {
