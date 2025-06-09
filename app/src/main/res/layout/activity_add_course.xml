@@ -1,29 +1,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical" android:padding="16dp">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:autofillHints=""
-        android:hint="@string/course_name"/>
+        android:hint="@string/course_name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/editTextDescription"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:autofillHints=""
+        android:layout_height="wrap_content"
         android:hint="@string/course_description"
         android:layout_marginTop="8dp"
+        android:importantForAutofill="no"
+        android:inputType="textMultiLine"
+        android:minLines="3"
         android:paddingTop="12dp"
-        android:paddingBottom="12dp"/>
+        android:paddingBottom="12dp" />
 
     <Button
         android:id="@+id/buttonSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/save_course"/>
+        android:text="@string/save_course" />
 </LinearLayout>
-

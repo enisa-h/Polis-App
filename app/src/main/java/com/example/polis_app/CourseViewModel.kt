@@ -6,10 +6,10 @@ import kotlinx.coroutines.launch
 import androidx.lifecycle.MutableLiveData
 
 class CourseViewModel(private val repository: CourseRepository) : ViewModel() {
-    val courses = MutableLiveData<List<Course>>()
-    val error = MutableLiveData<String>()
+    private val courses = MutableLiveData<List<Course>>()
+    private val error = MutableLiveData<String>()
 
-    fun fetchCourses() {
+    private fun fetchCourses() {
         viewModelScope.launch {
             try {
                 courses.value = repository.getCourses()
